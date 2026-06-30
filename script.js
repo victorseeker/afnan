@@ -1,50 +1,74 @@
+// =========================
+// Typing Effect
+// =========================
+
 const text = `Hello Afnan! 👋
 
 I'm Victor.
 
 I made this little website just to say...
 
-Nice to meet you. 💖`;
+Nice to meet you. 💖
+
+I hope this little page brings a smile to your face. 🌸`;
 
 const typing = document.getElementById("typing");
 
-let i = 0;
+let index = 0;
 
 function typeWriter() {
-    if (i < text.length) {
-        if (text[i] === "\n") {
-            typing.innerHTML += "<br>";
-        } else {
-            typing.innerHTML += text[i];
-        }
-        i++;
-        setTimeout(typeWriter, 35);
+
+    if (index >= text.length) return;
+
+    if (text[index] === "\n") {
+        typing.innerHTML += "<br>";
+    } else {
+        typing.innerHTML += text[index];
     }
+
+    index++;
+
+    setTimeout(typeWriter, 35);
+
 }
 
 typeWriter();
 
-// ===== Letter =====
+
+// =========================
+// Letter Popup
+// =========================
 
 const overlay = document.getElementById("overlay");
 const letterBtn = document.getElementById("letterBtn");
 const closeBtn = document.getElementById("closeBtn");
 
-letterBtn.addEventListener("click", function () {
+letterBtn.addEventListener("click", () => {
+
     overlay.classList.add("show");
+
 });
 
-closeBtn.addEventListener("click", function () {
+closeBtn.addEventListener("click", () => {
+
     overlay.classList.remove("show");
+
 });
 
-overlay.addEventListener("click", function (e) {
+overlay.addEventListener("click", (e) => {
+
     if (e.target === overlay) {
+
         overlay.classList.remove("show");
+
     }
+
 });
 
-// ===== Sakura =====
+
+// =========================
+// Sakura
+// =========================
 
 function createPetal() {
 
@@ -52,50 +76,103 @@ function createPetal() {
 
     petal.className = "petal";
 
-    petal.innerHTML = "🌸";
+    const flowers = ["🌸", "🌸", "🌺", "💮"];
+
+    petal.textContent =
+        flowers[Math.floor(Math.random() * flowers.length)];
 
     petal.style.left = Math.random() * 100 + "vw";
 
-    petal.style.fontSize = (14 + Math.random() * 10) + "px";
+    petal.style.fontSize =
+        (14 + Math.random() * 10) + "px";
 
-    petal.style.animationDuration = (5 + Math.random() * 5) + "s";
+    petal.style.animationDuration =
+        (5 + Math.random() * 5) + "s";
 
     document.body.appendChild(petal);
 
-    setTimeout(function () {
+    setTimeout(() => {
+
         petal.remove();
+
     }, 10000);
+
 }
 
 setInterval(createPetal, 300);
 
-// ===== Hearts =====
 
-document.addEventListener("click", function (e) {
+// =========================
+// Hearts
+// =========================
+
+document.addEventListener("click", (e) => {
+
+    if (
+        e.target.id === "letterBtn" ||
+        e.target.id === "closeBtn"
+    ) return;
 
     const heart = document.createElement("div");
 
-    heart.innerHTML = "💖";
+    heart.textContent = "💖";
 
     heart.style.position = "fixed";
     heart.style.left = e.clientX + "px";
     heart.style.top = e.clientY + "px";
     heart.style.pointerEvents = "none";
-    heart.style.transition = "1s";
+    heart.style.transition = "1s ease";
+    heart.style.zIndex = "9999";
+    heart.style.fontSize = "22px";
 
     document.body.appendChild(heart);
 
-    requestAnimationFrame(function () {
+    requestAnimationFrame(() => {
 
-        heart.style.transform = "translateY(-80px) scale(1.3)";
+        heart.style.transform =
+            "translateY(-90px) scale(1.5)";
+
         heart.style.opacity = "0";
 
     });
 
-    setTimeout(function () {
+    setTimeout(() => {
 
         heart.remove();
 
-    },1000);
+    }, 1000);
 
 });
+
+
+// =========================
+// Avatar Float
+// =========================
+
+const avatar = document.querySelector(".avatar");
+
+setInterval(() => {
+
+    avatar.animate([
+
+        {
+            transform: "translateY(0)"
+        },
+
+        {
+            transform: "translateY(-8px)"
+        },
+
+        {
+            transform: "translateY(0)"
+        }
+
+    ], {
+
+        duration: 2800,
+
+        easing: "ease-in-out"
+
+    });
+
+}, 2800);
