@@ -1,0 +1,383 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2762.3">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1">&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1">&lt;title&gt;For Afnan ❤️&lt;/title&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&amp;display=swap" rel="stylesheet"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;style&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">*{</p>
+<p class="p1">margin:0;</p>
+<p class="p1">padding:0;</p>
+<p class="p1">box-sizing:border-box;</p>
+<p class="p1">font-family:'Fredoka',sans-serif;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">body{</p>
+<p class="p1">height:100vh;</p>
+<p class="p1">overflow:hidden;</p>
+<p class="p1">background:linear-gradient(135deg,#ffd8e8,#ffeff7,#fff8fc);</p>
+<p class="p1">display:flex;</p>
+<p class="p1">justify-content:center;</p>
+<p class="p1">align-items:center;</p>
+<p class="p1">position:relative;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">canvas{</p>
+<p class="p1">position:fixed;</p>
+<p class="p1">left:0;</p>
+<p class="p1">top:0;</p>
+<p class="p1">pointer-events:none;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.card{</p>
+<p class="p2"><br></p>
+<p class="p1">width:90%;</p>
+<p class="p1">max-width:760px;</p>
+<p class="p2"><br></p>
+<p class="p1">padding:55px;</p>
+<p class="p2"><br></p>
+<p class="p1">border-radius:35px;</p>
+<p class="p2"><br></p>
+<p class="p1">background:rgba(255,255,255,.55);</p>
+<p class="p2"><br></p>
+<p class="p1">backdrop-filter:blur(18px);</p>
+<p class="p2"><br></p>
+<p class="p1">box-shadow:0 15px 45px rgba(255,105,180,.25);</p>
+<p class="p2"><br></p>
+<p class="p1">text-align:center;</p>
+<p class="p2"><br></p>
+<p class="p1">z-index:2;</p>
+<p class="p2"><br></p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.avatar{</p>
+<p class="p2"><br></p>
+<p class="p1">width:140px;</p>
+<p class="p1">height:140px;</p>
+<p class="p2"><br></p>
+<p class="p1">margin:auto;</p>
+<p class="p2"><br></p>
+<p class="p1">border-radius:50%;</p>
+<p class="p2"><br></p>
+<p class="p1">display:flex;</p>
+<p class="p1">justify-content:center;</p>
+<p class="p1">align-items:center;</p>
+<p class="p2"><br></p>
+<p class="p1">font-size:72px;</p>
+<p class="p2"><br></p>
+<p class="p1">background:linear-gradient(135deg,#ff88c3,#ffc7df);</p>
+<p class="p2"><br></p>
+<p class="p1">animation:float 3s ease-in-out infinite;</p>
+<p class="p2"><br></p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">@keyframes float{</p>
+<p class="p2"><br></p>
+<p class="p1">0%,100%{</p>
+<p class="p1">transform:translateY(0);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">50%{</p>
+<p class="p1">transform:translateY(-12px);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">h1{</p>
+<p class="p2"><br></p>
+<p class="p1">margin-top:25px;</p>
+<p class="p2"><br></p>
+<p class="p1">font-size:45px;</p>
+<p class="p2"><br></p>
+<p class="p1">color:#ff4b95;</p>
+<p class="p2"><br></p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">#typing{</p>
+<p class="p2"><br></p>
+<p class="p1">margin-top:20px;</p>
+<p class="p2"><br></p>
+<p class="p1">font-size:24px;</p>
+<p class="p2"><br></p>
+<p class="p1">color:#555;</p>
+<p class="p2"><br></p>
+<p class="p1">line-height:1.8;</p>
+<p class="p2"><br></p>
+<p class="p1">min-height:160px;</p>
+<p class="p2"><br></p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">button{</p>
+<p class="p2"><br></p>
+<p class="p1">margin-top:35px;</p>
+<p class="p2"><br></p>
+<p class="p1">padding:16px 38px;</p>
+<p class="p2"><br></p>
+<p class="p1">border:none;</p>
+<p class="p2"><br></p>
+<p class="p1">border-radius:50px;</p>
+<p class="p2"><br></p>
+<p class="p1">background:linear-gradient(90deg,#ff72b0,#ffb6d8);</p>
+<p class="p2"><br></p>
+<p class="p1">color:white;</p>
+<p class="p2"><br></p>
+<p class="p1">font-size:20px;</p>
+<p class="p2"><br></p>
+<p class="p1">cursor:pointer;</p>
+<p class="p2"><br></p>
+<p class="p1">transition:.3s;</p>
+<p class="p2"><br></p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">button:hover{</p>
+<p class="p2"><br></p>
+<p class="p1">transform:scale(1.08);</p>
+<p class="p2"><br></p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">#letter{</p>
+<p class="p2"><br></p>
+<p class="p1">display:none;</p>
+<p class="p2"><br></p>
+<p class="p1">margin-top:35px;</p>
+<p class="p2"><br></p>
+<p class="p1">padding:25px;</p>
+<p class="p2"><br></p>
+<p class="p1">border-radius:25px;</p>
+<p class="p2"><br></p>
+<p class="p1">background:white;</p>
+<p class="p2"><br></p>
+<p class="p1">box-shadow:0 10px 25px rgba(0,0,0,.08);</p>
+<p class="p2"><br></p>
+<p class="p1">font-size:20px;</p>
+<p class="p2"><br></p>
+<p class="p1">line-height:1.8;</p>
+<p class="p2"><br></p>
+<p class="p1">color:#555;</p>
+<p class="p2"><br></p>
+<p class="p1">animation:pop .5s;</p>
+<p class="p2"><br></p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">@keyframes pop{</p>
+<p class="p2"><br></p>
+<p class="p1">from{</p>
+<p class="p1">transform:scale(.8);</p>
+<p class="p1">opacity:0;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">to{</p>
+<p class="p1">transform:scale(1);</p>
+<p class="p1">opacity:1;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.heart{</p>
+<p class="p2"><br></p>
+<p class="p1">position:fixed;</p>
+<p class="p2"><br></p>
+<p class="p1">font-size:24px;</p>
+<p class="p2"><br></p>
+<p class="p1">animation:fly 1s linear forwards;</p>
+<p class="p2"><br></p>
+<p class="p1">pointer-events:none;</p>
+<p class="p2"><br></p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">@keyframes fly{</p>
+<p class="p2"><br></p>
+<p class="p1">to{</p>
+<p class="p2"><br></p>
+<p class="p1">transform:translateY(-100px);</p>
+<p class="p2"><br></p>
+<p class="p1">opacity:0;</p>
+<p class="p2"><br></p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.sakura{</p>
+<p class="p2"><br></p>
+<p class="p1">position:absolute;</p>
+<p class="p2"><br></p>
+<p class="p1">color:#ff9bc6;</p>
+<p class="p2"><br></p>
+<p class="p1">animation:fall linear infinite;</p>
+<p class="p2"><br></p>
+<p class="p1">opacity:.8;</p>
+<p class="p2"><br></p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">@keyframes fall{</p>
+<p class="p2"><br></p>
+<p class="p1">0%{</p>
+<p class="p1">transform:translateY(-100px) rotate(0deg);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">100%{</p>
+<p class="p1">transform:translateY(110vh) rotate(360deg);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">footer{</p>
+<p class="p2"><br></p>
+<p class="p1">margin-top:40px;</p>
+<p class="p2"><br></p>
+<p class="p1">color:#888;</p>
+<p class="p2"><br></p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="card"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="avatar"&gt;🧸&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;h1&gt;Hi, Afnan! 💖&lt;/h1&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div id="typing"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;button onclick="openLetter()"&gt;💌 Open My Letter&lt;/button&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div id="letter"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;h2&gt;Dear Afnan, 🌸&lt;/h2&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">Nice to meet you!</p>
+<p class="p2"><br></p>
+<p class="p1">I'm Victor.</p>
+<p class="p2"><br></p>
+<p class="p1">I made this little website just for you.</p>
+<p class="p2"><br></p>
+<p class="p1">I hope it brings a smile to your face.</p>
+<p class="p2"><br></p>
+<p class="p1">Wishing you happiness, laughter,</p>
+<p class="p1">good health, and many wonderful adventures.</p>
+<p class="p2"><br></p>
+<p class="p1">Thank you for visiting my tiny corner of the internet.</p>
+<p class="p2"><br></p>
+<p class="p1">Have an amazing day! 💕</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">Made with ❤️ by Victor</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">// Typing Effect</p>
+<p class="p2"><br></p>
+<p class="p1">const text=`Hello Afnan! 👋</p>
+<p class="p2"><br></p>
+<p class="p1">I'm Victor.</p>
+<p class="p2"><br></p>
+<p class="p1">It's really nice to meet you.</p>
+<p class="p2"><br></p>
+<p class="p1">I hope we can become good friends.</p>
+<p class="p2"><br></p>
+<p class="p1">Welcome to this little page I made especially for you. 🌸`;</p>
+<p class="p2"><br></p>
+<p class="p1">let i=0;</p>
+<p class="p2"><br></p>
+<p class="p1">function type(){</p>
+<p class="p2"><br></p>
+<p class="p1">if(i&lt;text.length){</p>
+<p class="p2"><br></p>
+<p class="p1">document.getElementById("typing").innerHTML+=text.charAt(i);</p>
+<p class="p2"><br></p>
+<p class="p1">i++;</p>
+<p class="p2"><br></p>
+<p class="p1">setTimeout(type,45);</p>
+<p class="p2"><br></p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">type();</p>
+<p class="p2"><br></p>
+<p class="p1">function openLetter(){</p>
+<p class="p2"><br></p>
+<p class="p1">document.getElementById("letter").style.display="block";</p>
+<p class="p2"><br></p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">// Hearts</p>
+<p class="p2"><br></p>
+<p class="p1">document.addEventListener("click",e=&gt;{</p>
+<p class="p2"><br></p>
+<p class="p1">const h=document.createElement("div");</p>
+<p class="p2"><br></p>
+<p class="p1">h.className="heart";</p>
+<p class="p2"><br></p>
+<p class="p1">h.innerHTML="💖";</p>
+<p class="p2"><br></p>
+<p class="p1">h.style.left=e.clientX+"px";</p>
+<p class="p2"><br></p>
+<p class="p1">h.style.top=e.clientY+"px";</p>
+<p class="p2"><br></p>
+<p class="p1">document.body.appendChild(h);</p>
+<p class="p2"><br></p>
+<p class="p1">setTimeout(()=&gt;h.remove(),1000);</p>
+<p class="p2"><br></p>
+<p class="p1">});</p>
+<p class="p2"><br></p>
+<p class="p1">// Sakura</p>
+<p class="p2"><br></p>
+<p class="p1">for(let i=0;i&lt;35;i++){</p>
+<p class="p2"><br></p>
+<p class="p1">let s=document.createElement("div");</p>
+<p class="p2"><br></p>
+<p class="p1">s.className="sakura";</p>
+<p class="p2"><br></p>
+<p class="p1">s.innerHTML="🌸";</p>
+<p class="p2"><br></p>
+<p class="p1">s.style.left=Math.random()*100+"vw";</p>
+<p class="p2"><br></p>
+<p class="p1">s.style.fontSize=(18+Math.random()*18)+"px";</p>
+<p class="p2"><br></p>
+<p class="p1">s.style.animationDuration=(6+Math.random()*8)+"s";</p>
+<p class="p2"><br></p>
+<p class="p1">s.style.animationDelay=Math.random()*6+"s";</p>
+<p class="p2"><br></p>
+<p class="p1">document.body.appendChild(s);</p>
+<p class="p2"><br></p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
