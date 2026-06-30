@@ -1,210 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nice to Meet You, Afnan 💖</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For Afnan 💖</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Fredoka',sans-serif;
-}
-
-body{
-height:100vh;
-overflow:hidden;
-display:flex;
-justify-content:center;
-align-items:center;
-background:linear-gradient(135deg,#ffd6e8,#fff2f8,#ffffff);
-}
-
-.card{
-width:90%;
-max-width:700px;
-padding:50px;
-text-align:center;
-background:rgba(255,255,255,.7);
-backdrop-filter:blur(15px);
-border-radius:30px;
-box-shadow:0 15px 40px rgba(255,105,180,.25);
-position:relative;
-z-index:10;
-}
-
-.avatar{
-width:130px;
-height:130px;
-margin:auto;
-border-radius:50%;
-background:#ff9ac6;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:65px;
-animation:float 3s ease-in-out infinite;
-}
-
-@keyframes float{
-0%,100%{transform:translateY(0);}
-50%{transform:translateY(-10px);}
-}
-
-h1{
-margin-top:25px;
-font-size:45px;
-color:#ff4d94;
-}
-
-p{
-margin-top:25px;
-font-size:22px;
-line-height:1.8;
-color:#555;
-}
-
-button{
-margin-top:35px;
-padding:15px 35px;
-font-size:20px;
-border:none;
-border-radius:40px;
-background:#ff69b4;
-color:white;
-cursor:pointer;
-transition:.3s;
-}
-
-button:hover{
-transform:scale(1.08);
-}
-
-#message{
-display:none;
-margin-top:30px;
-font-size:22px;
-color:#ff4d94;
-font-weight:bold;
-}
-
-.flower{
-position:absolute;
-font-size:22px;
-animation:fall linear infinite;
-opacity:.8;
-}
-
-@keyframes fall{
-0%{
-transform:translateY(-100px) rotate(0deg);
-}
-100%{
-transform:translateY(110vh) rotate(360deg);
-}
-}
-</style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="card">
+<div id="petals"></div>
 
-<div class="avatar">🧸</div>
+<main class="container">
 
-<h1>Hi, Afnan! 💖</h1>
+    <div class="card">
 
-<p id="typing"></p>
+        <div class="avatar">
+            🧸
+        </div>
 
-<button onclick="showMessage()">Open My Message 💌</button>
+        <h1>
+            Hi, Afnan! 💖
+        </h1>
 
-<div id="message">
-Nice to meet you, Afnan! 🌸<br><br>
-I'm Victor.<br><br>
-I made this little website just to say hello.<br>
-I hope it makes you smile. 😊💕
-</div>
+        <h2>
+            Nice to meet you.
+        </h2>
 
-</div>
+        <p id="typing"></p>
 
-<script>
+        <button id="openBtn">
+            💌 Open My Letter
+        </button>
 
-const text="Hello Afnan! 👋 I'm Victor. It's really nice to meet you. I hope we can become good friends and make wonderful memories together.";
+        <div id="letter">
 
-let i=0;
+            <h3>Dear Afnan 🌸</h3>
 
-function type(){
-if(i<text.length){
-document.getElementById("typing").innerHTML+=text.charAt(i);
-i++;
-setTimeout(type,40);
-}
-}
+            <p>
 
-type();
+                Hello!
 
-function showMessage(){
-document.getElementById("message").style.display="block";
-}
+                <br><br>
 
-for(let i=0;i<30;i++){
+                I'm Victor.
 
-let f=document.createElement("div");
+                <br><br>
 
-f.className="flower";
+                I made this little website just to say...
 
-f.innerHTML="🌸";
+                <br><br>
 
-f.style.left=Math.random()*100+"vw";
+                <strong>
+                Nice to meet you.
+                </strong>
 
-f.style.top="-50px";
+                💕
 
-f.style.animationDuration=(6+Math.random()*6)+"s";
+                <br><br>
 
-f.style.animationDelay=Math.random()*5+"s";
+                I hope this tiny webpage brings a smile to your face.
 
-document.body.appendChild(f);
+                <br><br>
 
-}
+                Wishing you happiness,
 
-document.addEventListener("click",e=>{
+                good health,
 
-let heart=document.createElement("div");
+                lots of laughter,
 
-heart.innerHTML="💖";
+                and wonderful adventures.
 
-heart.style.position="fixed";
+                ✨
 
-heart.style.left=e.clientX+"px";
+            </p>
 
-heart.style.top=e.clientY+"px";
+        </div>
 
-heart.style.fontSize="24px";
+    </div>
 
-heart.style.pointerEvents="none";
+</main>
 
-heart.style.transition="all 1s";
+<footer>
 
-document.body.appendChild(heart);
+Made with ❤️ by Victor
 
-setTimeout(()=>{
-heart.style.transform="translateY(-100px)";
-heart.style.opacity="0";
-},10);
+</footer>
 
-setTimeout(()=>{
-heart.remove();
-},1000);
-
-});
-
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
