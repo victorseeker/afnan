@@ -1,9 +1,101 @@
-const text=`Hello Afnan! 👋\n\nI'm Victor.\n\nI hope this little website brings a smile to your face. 💖`;
-let i=0;const t=document.getElementById('typing');
-(function type(){if(i<text.length){t.innerHTML+=text[i]=='\n'?'<br>':text[i];i++;setTimeout(type,35)}})();
-const overlay=document.getElementById('overlay');
-document.getElementById('letterBtn').onclick=()=>overlay.classList.add('show');
-document.getElementById('closeBtn').onclick=()=>overlay.classList.remove('show');
-overlay.onclick=e=>{if(e.target===overlay)overlay.classList.remove('show');};
-setInterval(()=>{const p=document.createElement('div');p.className='petal';p.textContent='🌸';p.style.left=Math.random()*100+'vw';p.style.fontSize=(14+Math.random()*10)+'px';p.style.animationDuration=(5+Math.random()*5)+'s';document.body.appendChild(p);setTimeout(()=>p.remove(),10000)},300);
-document.addEventListener('click',e=>{const h=document.createElement('div');h.textContent='💖';h.style.cssText=`position:fixed;left:${e.clientX}px;top:${e.clientY}px;pointer-events:none;transition:1s`;document.body.appendChild(h);requestAnimationFrame(()=>{h.style.transform='translateY(-80px) scale(1.3)';h.style.opacity='0'});setTimeout(()=>h.remove(),1000);});
+const text = `Hello Afnan! 👋
+
+I'm Victor.
+
+I made this little website just to say...
+
+Nice to meet you. 💖`;
+
+const typing = document.getElementById("typing");
+
+let i = 0;
+
+function typeWriter() {
+    if (i < text.length) {
+        if (text[i] === "\n") {
+            typing.innerHTML += "<br>";
+        } else {
+            typing.innerHTML += text[i];
+        }
+        i++;
+        setTimeout(typeWriter, 35);
+    }
+}
+
+typeWriter();
+
+// ===== Letter =====
+
+const overlay = document.getElementById("overlay");
+const letterBtn = document.getElementById("letterBtn");
+const closeBtn = document.getElementById("closeBtn");
+
+letterBtn.addEventListener("click", function () {
+    overlay.classList.add("show");
+});
+
+closeBtn.addEventListener("click", function () {
+    overlay.classList.remove("show");
+});
+
+overlay.addEventListener("click", function (e) {
+    if (e.target === overlay) {
+        overlay.classList.remove("show");
+    }
+});
+
+// ===== Sakura =====
+
+function createPetal() {
+
+    const petal = document.createElement("div");
+
+    petal.className = "petal";
+
+    petal.innerHTML = "🌸";
+
+    petal.style.left = Math.random() * 100 + "vw";
+
+    petal.style.fontSize = (14 + Math.random() * 10) + "px";
+
+    petal.style.animationDuration = (5 + Math.random() * 5) + "s";
+
+    document.body.appendChild(petal);
+
+    setTimeout(function () {
+        petal.remove();
+    }, 10000);
+}
+
+setInterval(createPetal, 300);
+
+// ===== Hearts =====
+
+document.addEventListener("click", function (e) {
+
+    const heart = document.createElement("div");
+
+    heart.innerHTML = "💖";
+
+    heart.style.position = "fixed";
+    heart.style.left = e.clientX + "px";
+    heart.style.top = e.clientY + "px";
+    heart.style.pointerEvents = "none";
+    heart.style.transition = "1s";
+
+    document.body.appendChild(heart);
+
+    requestAnimationFrame(function () {
+
+        heart.style.transform = "translateY(-80px) scale(1.3)";
+        heart.style.opacity = "0";
+
+    });
+
+    setTimeout(function () {
+
+        heart.remove();
+
+    },1000);
+
+});
